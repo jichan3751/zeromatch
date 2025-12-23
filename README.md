@@ -1,2 +1,2 @@
-# zmt
-Codebase for ZMT paper - under construction
+# ZerMatch
+Codebase for ZeroMatch paper - under construction

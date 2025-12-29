@@ -10,9 +10,9 @@ This codebase is built on top of [USB](https://github.com/microsoft/Semi-supervi
 
 ## Instructions
 
-1. To reproduce ZeroMatch training results, please follow the instructions in the [train_zeromatch directory](./train_zeromatch/README.md). Note that the datasets we provide already include zero-shot pseudo-labels generated from foundation models, so you do not have to generate them yourself.
+1. To reproduce ZeroMatch training results, please follow the instructions in the [train_zeromatch directory](./train_zeromatch). Note that the datasets we provide already include zero-shot pseudo-labels generated from foundation models, so you do not have to generate them yourself.
 
-2. To explore the code for generating zero-shot pseudo-labels for different datasets, please see the [get_zero_shot_plabels directory](./get_zero_shot_plabels/README.md).
+2. To explore the code for generating zero-shot pseudo-labels for different datasets, please see the [get_zero_shot_plabels directory](./get_zero_shot_plabels).
 
 <!-- ## Citation
 

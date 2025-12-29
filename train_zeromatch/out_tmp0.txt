@@ -1,0 +1,175 @@
+Using CUDA_VISIBLE_DEVICES=0 (num_gpus=1).
+Running: python train.py --save_dir_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42 --save_name_ow stage0 --num_labels_ow 200 --load_path_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage1/latest_model.pth --disable_multiprocessing_distributed --seed_ow 42 --net_mode 0 --ann_mode 0 --lmbd 0.0 --training_stage 0 --c config/usb_nlp/fullysupervised/fullysupervised_yelp_review_1000_paper_0.yaml --data_dir_ow /home/ubuntu/ff/scratch/data_storpt --plabel_data_path /home/ubuntu/ff/scratch/data_storpt/plabels/zero_shot_yelp_review_flan-t5-xxl_train_p0_sd42/plabel_results.pt --epoch_ow 4 --use_partial_data_rate 0.03125 --use_partial_dev_rate 0.01 --use_partial_test_rate 0.01 --num_train_iter_ow 96 --num_eval_iter_ow 32 --num_log_iter_ow 8
+args overwrited: data_dir_ow /home/ubuntu/ff/scratch/data_storpt
+args overwrited: load_path_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage1/latest_model.pth
+args overwrited: save_dir_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42
+args overwrited: save_name_ow stage0
+args overwrited: num_labels_ow 200
+args overwrited: seed_ow 42
+args overwrited: epoch_ow 4
+args overwrited: num_train_iter_ow 96
+args overwrited: num_eval_iter_ow 32
+args overwrited: num_log_iter_ow 8
+/bin/sh: 1: netstat: not found
+train.py:350: UserWarning: You have chosen to seed training. This will turn on the CUDNN deterministic setting, which can slow down your training considerably! You may see unexpected behavior when restarting from checkpoints.
+  warnings.warn(
+[2025-03-28 20:12:13,648 INFO] Use GPU: None for training
+[2025-03-28 20:12:17,864 INFO] unlabeled data number: 0, labeled data number 7810
+[2025-03-28 20:12:17,867 INFO] Create train and test data loaders
+[2025-03-28 20:12:18,493 INFO] [!] data loader keys: dict_keys(['train_lb', 'train_ulb', 'eval', 'test'])
+[2025-03-28 20:12:19,743 INFO] Create optimizer and scheduler
+anneal_scheduler_mode 0
+[2025-03-28 20:12:19,749 INFO] Number of Trainable Params: 110076677
+[2025-03-28 20:12:20,088 INFO] Arguments: Namespace(algorithm='fullysupervised', amp=False, ann_mode=0, batch_size=4, c='config/usb_nlp/fullysupervised/fullysupervised_yelp_review_1000_paper_0.yaml', clip=0.0, clip_grad=0, crop_ratio=0.875, data_dir='/home/ubuntu/ff/scratch/data_storpt', dataset='yelp_review', dist_backend='nccl', dist_url='tcp://127.0.0.1:27048', distributed=False, ema_m=0.0, epoch=4, eval_batch_size=8, gpu=None, imb_algorithm=None, img_size=32, include_lb_to_ulb=True, layer_decay=0.75, lb_dest_len=7810, lb_imb_ratio=1, lmbd=0.0, load_model_only_path='', load_path='outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage1/latest_model.pth', lr=5e-05, max_length=512, max_length_seconds=4.0, momentum=0.9, multiprocessing_distributed=False, net='bert_base_uncased', net_from_name=False, net_mode=0, num_classes=5, num_eval_iter=32, num_labels=200, num_log_iter=8, num_train_iter=96, num_warmup_iter=5120, num_workers=4, optim='AdamW', overwrite=True, plabel_data_path='/home/ubuntu/ff/scratch/data_storpt/plabels/zero_shot_yelp_review_flan-t5-xxl_train_p0_sd42/plabel_results.pt', pretrain_path='', rank=0, resume=True, sample_rate=16000, save_dir='outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42', save_name='stage0', seed=42, self_checkpointing_epochs=0, self_checkpointing_exit_code=85, train_sampler='RandomSampler', training_stage=0, ulb_dest_len=0, ulb_imb_ratio=1, ulb_loss_ratio=1.0, ulb_num_labels=None, uratio=1, use_aim=False, use_cat=False, use_partial_data_rate=0.03125, use_partial_dev_rate=0.01, use_partial_test_rate=0.01, use_pretrain=False, use_tensorboard=True, use_wandb=False, weight_decay=0.0001, world_size=1)
+[2025-03-28 20:12:20,088 INFO] Resume load path outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage1/latest_model.pth does not exist
+[2025-03-28 20:12:20,088 INFO] Model training
+[2025-03-28 20:12:22,455 INFO] 8 iteration USE_EMA: False, train/sup_loss: 1.6007, train/run_time: 0.0755, lr: 0.0000, train/prefecth_time: 0.0004 
+[2025-03-28 20:12:23,356 INFO] 16 iteration USE_EMA: False, train/sup_loss: 1.5344, train/run_time: 0.1166, lr: 0.0000, train/prefecth_time: 0.0023 
+[2025-03-28 20:12:24,191 INFO] 24 iteration USE_EMA: False, train/sup_loss: 1.5520, train/run_time: 0.0711, lr: 0.0000, train/prefecth_time: 0.0023 
+[2025-03-28 20:12:26,519 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/latest_model.pth
+[2025-03-28 20:12:27,542 INFO] validating...
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:1970: UndefinedMetricWarning: 'k' (5) greater than or equal to 'n_classes' (5) will result in a perfect score and is therefore meaningless.
+  warnings.warn(
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-28 20:12:29,115 INFO] confusion matrix:
+[[0.04 0.   0.   0.   0.96]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]]
+[2025-03-28 20:12:31,400 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/model_best.pth
+[2025-03-28 20:12:31,400 INFO] 32 iteration, USE_EMA: False, train/sup_loss: 1.5434, train/run_time: 0.0710, eval/loss: 1.6081, eval/top-1-acc: 0.2080, eval/top-5-acc: 1.0000, eval/balanced_acc: 0.2080, eval/precision: 0.2403, eval/recall: 0.2080, eval/F1: 0.0825, lr: 0.0000, train/prefecth_time: 0.0023 BEST_EVAL_ACC: 0.2080, at 32 iters
+[2025-03-28 20:12:32,328 INFO] 40 iteration USE_EMA: False, train/sup_loss: 1.6140, train/run_time: 0.1170, lr: 0.0000, train/prefecth_time: 0.0025 
+[2025-03-28 20:12:33,175 INFO] 48 iteration USE_EMA: False, train/sup_loss: 1.5306, train/run_time: 0.1041, lr: 0.0000, train/prefecth_time: 0.0023 
+[2025-03-28 20:12:44,242 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/latest_model.pth
+[2025-03-28 20:12:45,370 INFO] 56 iteration USE_EMA: False, train/sup_loss: 1.5526, train/run_time: 0.0678, lr: 0.0000, train/prefecth_time: 0.0027 
+[2025-03-28 20:12:46,296 INFO] validating...
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:1970: UndefinedMetricWarning: 'k' (5) greater than or equal to 'n_classes' (5) will result in a perfect score and is therefore meaningless.
+  warnings.warn(
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-28 20:12:47,878 INFO] confusion matrix:
+[[0.04 0.   0.   0.   0.96]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]]
+[2025-03-28 20:12:47,881 INFO] 64 iteration, USE_EMA: False, train/sup_loss: 1.5582, train/run_time: 0.0954, eval/loss: 1.6086, eval/top-1-acc: 0.2080, eval/top-5-acc: 1.0000, eval/balanced_acc: 0.2080, eval/precision: 0.2403, eval/recall: 0.2080, eval/F1: 0.0825, lr: 0.0000, train/prefecth_time: 0.0028 BEST_EVAL_ACC: 0.2080, at 32 iters
+[2025-03-28 20:12:48,687 INFO] 72 iteration USE_EMA: False, train/sup_loss: 1.5373, train/run_time: 0.0524, lr: 0.0000, train/prefecth_time: 0.0023 
+[2025-03-28 20:12:57,070 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/latest_model.pth
+[2025-03-28 20:12:58,113 INFO] 80 iteration USE_EMA: False, train/sup_loss: 1.5776, train/run_time: 0.1170, lr: 0.0000, train/prefecth_time: 0.0003 
+[2025-03-28 20:12:59,036 INFO] 88 iteration USE_EMA: False, train/sup_loss: 1.5818, train/run_time: 0.1050, lr: 0.0000, train/prefecth_time: 0.0023 
+[2025-03-28 20:12:59,930 INFO] validating...
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:1970: UndefinedMetricWarning: 'k' (5) greater than or equal to 'n_classes' (5) will result in a perfect score and is therefore meaningless.
+  warnings.warn(
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-28 20:13:01,486 INFO] confusion matrix:
+[[0.02 0.   0.   0.   0.98]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]]
+[2025-03-28 20:13:01,488 INFO] 96 iteration, USE_EMA: False, train/sup_loss: 1.5612, train/run_time: 0.0525, eval/loss: 1.6091, eval/top-1-acc: 0.2040, eval/top-5-acc: 1.0000, eval/balanced_acc: 0.2040, eval/precision: 0.2402, eval/recall: 0.2040, eval/F1: 0.0747, lr: 0.0000, train/prefecth_time: 0.0024 BEST_EVAL_ACC: 0.2080, at 32 iters
+[2025-03-28 20:13:09,874 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/latest_model.pth
+[2025-03-28 20:13:18,221 INFO] model saved: outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/latest_model.pth
+[2025-03-28 20:13:19,413 INFO] Model loaded
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_ranking.py:1970: UndefinedMetricWarning: 'k' (5) greater than or equal to 'n_classes' (5) will result in a perfect score and is therefore meaningless.
+  warnings.warn(
+/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-28 20:13:22,821 INFO] confusion matrix:
+[[0.02 0.   0.   0.   0.98]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.   0.   1.  ]
+ [0.   0.   0.01 0.   0.99]
+ [0.01 0.   0.   0.   0.99]]
+[2025-03-28 20:13:22,823 INFO] Model result - eval/best_acc : 0.208
+[2025-03-28 20:13:22,824 INFO] Model result - eval/best_it : 31
+[2025-03-28 20:13:22,824 INFO] Model result - test/best_acc : 0.202
+[2025-03-28 20:13:22,824 INFO] Model result - test/f1 : 0.07420994331139637
+[2025-03-28 20:13:22,824 WARNING] GPU 0 training is FINISHED
+reading test result from log.txt..
+[2025-03-28 20:13:22,824 INFO] Model result - test/best_acc : 0.202
+
+[2025-03-28 20:13:22,824 INFO] Model result - test/f1 : 0.07420994331139637
+
+plot saved at ./outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/loss_plot.png
+summarized results:
+{
+  "best_score": {
+    "step": 31,
+    "eval/F1": 0.0824987068772316,
+    "eval/balanced_acc": 0.20800000429153442,
+    "eval/loss": 1.6080867052078247,
+    "eval/precision": 0.24032257497310638,
+    "eval/recall": 0.20800000429153442,
+    "eval/top-5-acc": 1.0,
+    "eval/top-1-acc": 0.20800000429153442,
+    "test/acc": 0.202,
+    "test/f1": 0.07420994331139637
+  }
+}
+results saved at  ./outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/results.json
+Running: python train.py --save_dir_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42 --save_name_ow stage1 --num_labels_ow 200 --load_path_ow outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage1/latest_model.pth --disable_multiprocessing_distributed --seed_ow 42 --net_mode 0 --ann_mode 0 --lmbd 0.0 --training_stage 1 --load_model_only_path outputs/yelp_review_m1_l200_adamatch_pm0_nm0_ann0_lmbd0.0_sd42/stage0/model_best.pth --c config/usb_nlp/adamatch/adamatch_yelp_review_1000_paper_0.yaml --data_dir_ow /home/ubuntu/ff/scratch/data_storpt --plabel_data_path /home/ubuntu/ff/scratch/data_storpt/plabels/zero_shot_yelp_review_flan-t5-xxl_train_p0_sd42/plabel_results.pt --epoch_ow 4 --use_partial_data_rate 0.03125 --use_partial_dev_rate 0.01 --use_partial_test_rate 0.01 --num_train_iter_ow 96 --num_eval_iter_ow 32 --num_log_iter_ow 8
+Traceback (most recent call last):
+  File "train.py", line 16, in <module>
+    from semilearn.algorithms import get_algorithm, name2alg
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/__init__.py", line 4, in <module>
+    from .core.utils import get_dataset, get_data_loader, get_net_builder
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/__init__.py", line 5, in <module>
+    from .algorithmbase import AlgorithmBase, ImbAlgorithmBase
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/algorithmbase.py", line 15, in <module>
+    from semilearn.core.hooks import Hook, get_priority, CheckpointHook, TimerHook, LoggingHook, DistSamplerSeedHook, ParamUpdateHook, EvaluationHook, EMAHook, WANDBHook, AimHook
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/hooks/__init__.py", line 12, in <module>
+    from .ema import EMAHook
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/hooks/ema.py", line 6, in <module>
+    from semilearn.core.utils import EMA
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/utils/__init__.py", line 5, in <module>
+    from .build import *
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/core/utils/build.py", line 12, in <module>
+    from semilearn.nets.utils import param_groups_layer_decay, param_groups_weight_decay
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/nets/__init__.py", line 6, in <module>
+    from .vit import vit_base_patch16_224, vit_small_patch16_224, vit_small_patch2_32, vit_tiny_patch2_32, vit_base_patch16_96
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/nets/vit/__init__.py", line 4, in <module>
+    from .vit import vit_tiny_patch2_32, vit_small_patch2_32, vit_small_patch16_224, vit_base_patch16_224, vit_base_patch16_96
+  File "/home/ubuntu/ff/hc_plabel/250328_usb_knowledge_distill/app_usb/semilearn/nets/vit/vit.py", line 15, in <module>
+    from timm.layers import DropPath, trunc_normal_
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/__init__.py", line 8, in <module>
+    from .models import (
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/models/__init__.py", line 1, in <module>
+    from .beit import *
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/models/beit.py", line 48, in <module>
+    from timm.data import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/data/__init__.py", line 5, in <module>
+    from .dataset import ImageDataset, IterableImageDataset, AugMixDataset
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/data/dataset.py", line 13, in <module>
+    from .readers import create_reader
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/data/readers/__init__.py", line 1, in <module>
+    from .reader_factory import create_reader
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/data/readers/reader_factory.py", line 4, in <module>
+    from .reader_image_folder import ReaderImageFolder
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/data/readers/reader_image_folder.py", line 11, in <module>
+    from timm.utils.misc import natural_key
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/utils/__init__.py", line 16, in <module>
+    from .summary import update_summary, get_outdir
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/timm/utils/summary.py", line 9, in <module>
+    import wandb
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/__init__.py", line 21, in <module>
+    from wandb import sdk as wandb_sdk
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/__init__.py", line 28, in <module>
+    from .wandb_init import _attach, init
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 42, in <module>
+    from .backend.backend import Backend
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/backend/backend.py", line 20, in <module>
+    from wandb.sdk.internal.internal import wandb_internal
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/internal/internal.py", line 31, in <module>
+    from . import context, handler, internal_util, sender, writer
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/internal/writer.py", line 11, in <module>
+    from . import context, datastore, flow_control
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/internal/flow_control.py", line 218, in <module>
+    class StatePausing(StateShared):
+  File "/home/ubuntu/ff/scratch/env_usb/lib/python3.8/site-packages/wandb/sdk/internal/flow_control.py", line 227, in StatePausing
+    recover_records: Callable[[int, int], None],
+KeyboardInterrupt

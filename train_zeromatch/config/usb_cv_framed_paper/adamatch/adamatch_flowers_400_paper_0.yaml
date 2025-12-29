@@ -1,0 +1,49 @@
+algorithm: adamatch
+save_dir: ./saved_models/usb_cv/
+save_name: adamatch_cifar100_400_0
+resume: True
+load_path: ./saved_models/usb_cv//adamatch_cifar100_400_0/latest_model.pth
+overwrite: True
+use_tensorboard: True
+use_wandb: False
+epoch: 100 # framed
+num_train_iter: 102400 # framed
+num_log_iter: 128  # framed
+num_eval_iter: 1024  # framed
+batch_size: 16 # paper
+eval_batch_size: 16
+num_warmup_iter: 2560 # framed
+num_labels: 204 # framed
+uratio: 1
+ema_m: 0.0
+hard_label: True
+T: 0.5
+p_cutoff: 0.95
+ulb_loss_ratio: 1.0
+ema_p: 0.999
+img_size: 224 # framed
+crop_ratio: 0.875
+optim: AdamW
+lr: 1e-4 # framed
+layer_decay: 0.65 # framed
+momentum: 0.9
+weight_decay: 0.0005
+amp: False
+clip: 0.0
+use_cat: True
+net: vit_small_patch16_224 # framed
+net_from_name: False
+data_dir: ./data
+dataset: flowers # framed
+train_sampler: RandomSampler
+num_classes: 102 # framed
+num_workers: 4
+seed: 0
+world_size: 1
+rank: 0
+multiprocessing_distributed: True
+dist_url: tcp://127.0.0.1:10076
+dist_backend: nccl
+gpu: None
+use_pretrain: True
+pretrain_path: https://github.com/microsoft/Semi-supervised-learning/releases/download/v.0.0.0/vit_small_patch16_224_mlp_im_1k_224.pth # framed

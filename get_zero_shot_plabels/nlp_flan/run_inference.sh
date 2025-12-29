@@ -10,7 +10,7 @@ set -e
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=4
 
-SCRATCH_PATH="../scratch"
+SCRATCH_PATH="../../scratch"
 export HF_HOME=$SCRATCH_PATH/huggingface
 export TORCH_HOME=$SCRATCH_PATH/cache/torch
 

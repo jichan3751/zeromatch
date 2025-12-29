@@ -13,7 +13,7 @@ export OMP_NUM_THREADS=4
 # export OPENAI_BASE_URL="https://api.openai.com/v1"
 # export OPENAI_API_KEY="your api key here"
 
-SCRATCH_PATH="../scratch"
+SCRATCH_PATH="../../scratch"
 export HF_HOME=$SCRATCH_PATH/huggingface
 export TORCH_HOME=$SCRATCH_PATH/cache/torch
 

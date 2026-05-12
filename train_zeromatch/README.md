@@ -5,9 +5,9 @@ The codebase is built on top of the [Unified Semi-supervised Learning codebase](
 
 ## Prepare Dataset
 Please download the dataset tar files:
-- [data_zeromatch_cifar.tar](https://drive.google.com/file/d/1cyFGtCIzp1Yk-IM3rmposNNhpp33XM3Z/view?usp=sharing): includes the CIFAR100 dataset from USB.
-- [data_zeromatch_framed.tar](https://drive.google.com/file/d/1e5IpLBT2n98dKM5go2Cuixyi1QyLaWED/view?usp=sharing): includes the Flowers102 and Resisc45 datasets from the [GRIP codebase](https://github.com/BatsResearch/menghini-neurips23-code).
-- [data_zeromatch_nlp.tar](https://drive.google.com/file/d/1rC4qusGOfzhHeNQKpcvKQ7yYbHMxsZwC/view?usp=sharing): includes the Yahoo Answers, AG News, and Amazon Review datasets from USB.
+- [data_zeromatch_cifar.tar](https://drive.google.com/file/d/1Yctg7Mr-v2Zb3LXmlyyYHagWblBSBFgb/view?usp=sharing): includes the CIFAR100 dataset from USB.
+- [data_zeromatch_framed.tar](https://drive.google.com/file/d/1X2SMXhbBOaP_Y45pmhGbn40dAqE7H9vR/view?usp=sharing): includes the Flowers102 and Resisc45 datasets from the [GRIP codebase](https://github.com/BatsResearch/menghini-neurips23-code).
+- [data_zeromatch_nlp.tar](https://drive.google.com/file/d/1mEm7J_gvB2hyDwle5A_UjzKpRTL7c9NJ/view?usp=sharing): includes the Yahoo Answers, AG News, and Amazon Review datasets from USB.
 
 If the above datasets are not available, you can follow the data setup instructions from [USB](https://github.com/microsoft/Semi-supervised-learning) and [GRIP](https://github.com/BatsResearch/menghini-neurips23-code).  
 Each tar file includes zero-shot pseudo-label sets for the corresponding datasets in the `plabels` directory.
